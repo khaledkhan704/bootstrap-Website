@@ -1,3 +1,5 @@
+
+<?--Customize 1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +7,9 @@
 <title>Sk Taylor Company</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- 
+
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -72,12 +74,12 @@ margin:25px 0;
 .slide {
     /* The name of the animation */
     animation-name: slide;
-    -webkit-animation-name: slide; 
+    -webkit-animation-name: slide;
     /* The duration of the animation */
-    animation-duration: 1s; 
+    animation-duration: 1s;
     -webkit-animation-duration: 1s;
     /* Make the element visible */
-    visibility: visible; 
+    visibility: visible;
 }
 
 /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
@@ -85,17 +87,17 @@ margin:25px 0;
     0% {
         opacity: 0;
         transform: translateY(70%);
-    } 
+    }
     100% {
         opacity: 1;
         transform: translateY(0%);
-    } 
+    }
 }
 @-webkit-keyframes slide {
     0% {
         opacity: 0;
         -webkit-transform: translateY(70%);
-    } 
+    }
     100% {
         opacity: 1;
         -webkit-transform: translateY(0%);
@@ -168,7 +170,7 @@ $(window).scroll(function() {
 </nav>
 <div class="jumbotron text-capitalize text-center"><?--Jumbotron create a square bracket with rounded corner and text inside it will have predefined font style and top padding>
 
-<h1> Sk Taylor</h1> 
+<h1> Sk Taylor</h1>
 <p class="lead">We  Specialize  In Ladies Garments</p>
 
 <form class="form-inline"><?-- form-inline class create inline form with all element left aligned and label alongside>
@@ -182,7 +184,7 @@ $(window).scroll(function() {
 </div>
 </div>
 </form>
- 
+
 </div>
 
 <!-- Container (About Section) -->
@@ -192,7 +194,7 @@ $(window).scroll(function() {
 <div class="col-sm-8"><?--row add upto 12 col as per grid system.>
 
   <h2>About Company Page</h2>
-  <h4>Sk Taylor..</h4>      
+  <h4>Sk Taylor..</h4>
   <p>Sk Taylor..</p>
   <button class="btn  btn-lg">Get in Touch</button>
 
@@ -209,9 +211,9 @@ $(window).scroll(function() {
 <span class="glyphicon glyphicon-globe logo"></span>
 </div>
 
-<div class="col-sm-8"> 
+<div class="col-sm-8">
  <h2>Our Values</h2>
-  <h4><strong>MISSION:</strong> Our mission Sk Taylor..</h4>      
+  <h4><strong>MISSION:</strong> Our mission Sk Taylor..</h4>
   <p><strong>VISION:</strong> Our vision Sk Taylor..
 </div>
 </div>
@@ -301,7 +303,7 @@ $(window).scroll(function() {
 
 <div class="col-sm-5">
 <p>Contact us and we'll get back to you within 24 hours.</p>
-      
+
 <p><span class="glyphicon glyphicon-map-marker"></span> Andheri(W), Mumbai</p>
 <p><span class="glyphicon glyphicon-phone"></span> +91 9029695350</p>
 <p><span class="glyphicon glyphicon-envelope"></span> khaledkhan.70448@gmail.com</p>
@@ -321,10 +323,22 @@ $(window).scroll(function() {
         <div class="col-sm-12 form-group">
           <button class="btn btn-default pull-right" type="submit">Send</button>
         </div>
-      </div> 
+      </div>
     </div>
   </div>
 </div>
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 </body>
 
 </html>
